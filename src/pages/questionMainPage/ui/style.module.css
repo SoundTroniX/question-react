@@ -1,8 +1,40 @@
+
+/* 
 .questions {
-    display: grid;
-    grid-template-columns: 2fr 1fr;
-    gap: 24px;
-    max-width: 1220px;
-    margin: 0 auto;
-    justify-content: space-between;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+  justify-content: space-between;
+}
+
+@media (max-width: 700px) {
+  .questions {
+    grid-template-columns: 1fr;
+  }
+} 
+  
+*/
+/* @@@@@@ */
+
+.questions {
+  display: flex;
+  gap: 24px;
+  max-width: 1440px;
+  margin: 0 auto;
+}
+.questions > :first-child {
+  flex: 2;
+}
+
+/* Второй ребёнок — 33% */
+.questions > :last-child {
+  flex: 1;
+}
+/* Адаптив: на мобильных — колонка */
+@media (max-width: 700px) {
+  .questions {
+    flex-direction: column-reverse;
+  }
 }

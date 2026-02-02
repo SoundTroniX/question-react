@@ -1,13 +1,13 @@
 import styles from "./style.module.css";
 import { Link } from "react-router-dom";
 import Image from "../../../../shared/ui/Image/Image";
-import logo from "../Header/Frame 2087327446.svg";
+import logo from '@shared/assets/images/Frame 2087327446.svg'
 export default function Header() {
   return (
     <header className={styles.header}>
       <div className={styles.container}>
         <Link to={"/"}>
-          <Image image={logo}></Image>
+          <Image alt='logo yeahub' image={logo}></Image>
         </Link>
 
         <Link className={styles.link} to="/">

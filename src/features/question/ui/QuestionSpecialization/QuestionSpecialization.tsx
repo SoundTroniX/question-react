@@ -30,6 +30,7 @@ export default function QuestionSpecialization() {
       <h3 className={styles.title}>Специализация</h3>
       <div className={styles.wrapper}>
         {visibleSpecializations?.map((special) => {
+          const cleanTitle = special.title.replace(/ Developer$/i, '');
           return (
             <button
               onClick={() => {
@@ -38,7 +39,7 @@ export default function QuestionSpecialization() {
               className={`${styles.btn} ${selectedSpecializationId === special.id ? styles.selected : null}`}
               key={special.id}
             >
-              {special.title}
+              {cleanTitle}
             </button>
           );
         })}

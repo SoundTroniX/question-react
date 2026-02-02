@@ -1,7 +1,9 @@
 .container {
     margin: 0 auto;
-	padding: 0 112px;
+	/* padding: 0 112px; */
+    padding: 0 clamp(6px, 3vw, 112px);
     height: 100%;
+    max-width: 1440px;
 }
 
 .base {

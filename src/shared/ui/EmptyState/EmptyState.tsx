@@ -5,7 +5,7 @@ interface Props {
 export default function EmptyState({onAction} : Props) {
   return (
     <div className={styles.emptyState}>
-      <h4 className={styles.title}>Вопросов нет</h4>
+      <h4 className={styles.title}>Нет данных</h4>
       <p className={styles.message}>Попробуйте сбросить фильтры</p>
       <button className={styles.button} onClick={onAction}>Сбросить</button>
     </div>
