@@ -1,0 +1,90 @@
+.item {
+    display: flex;
+    flex-direction: column;
+    padding-bottom: 10px;
+    width: 100%;
+    border-bottom: 1px solid #D1D1D1;
+    cursor: pointer;
+}
+
+.dot {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  content: "•";
+  font-size: 28px;
+  color: #5533ff;
+  line-height: 1;
+  width: 24px;
+  height: 24px;
+}
+
+.wrapper {
+    display: grid;
+    grid-template-columns: 24px auto 20px;
+}
+.title {
+  font-family: Manrope;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 20px;
+  line-height: 120%;
+  letter-spacing: 0%;
+  color: #191919;
+}
+
+.arrow {
+    width: 20px;
+    height: 20px;
+    background-image: url(/src/shared/assets/icons/arrowUp.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    transform: rotate(180deg);
+}
+
+.arrowActive {
+    transform: rotate(360deg);
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+    padding: 24px 0px 2px 24px;
+}
+.link {
+    margin-left: auto;
+    display: flex;
+    gap: 8px;
+    background-color: transparent;
+}
+
+
+.detail {
+    display: flex;
+    gap: 8px;
+    flex-direction: row;
+}
+
+.rate,
+.complexity {
+  background-color: #f8f8f8;
+  padding: 6px 10px;
+  border-radius: 8px;
+}
+
+.range {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffff;
+  background-color: #6a0bff;
+  border-radius: 4px;
+  padding: 0px 6px 0px 6px;
+}
+
+.img {
+    max-width: 450px;
+    max-height: 312px;
+}
+

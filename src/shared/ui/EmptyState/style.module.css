@@ -1,0 +1,23 @@
+.emptyState {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  padding: 40px 24px;
+  text-align: center;
+  background-color: #ffff;
+  border-radius: 24px;
+}
+
+.button {
+  background-color: #ffff;
+  margin-top: 16px;
+  padding: 12px;
+  border: 2px solid #6a0bff;
+  border-radius: 8px;
+}
+
+.button:hover {
+  background-color: #f6f6f6;
+}
