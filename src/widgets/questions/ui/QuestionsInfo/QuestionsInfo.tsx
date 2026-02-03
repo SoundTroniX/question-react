@@ -13,19 +13,19 @@ export default function QuestionsInfo({ question }: Props) {
         <div className={styles.brief}>
           <img className={styles.img} src={questionLogo}></img>
           <div className={styles.content}>
-            <h4 className={styles.title}>{title}</h4>
+            <h3 className={styles.title}>{title}</h3>
             <p className={styles.description}>{description}</p>
           </div>
         </div>
       </div>
       {/* ---- */}
       <div className={styles.wrapper}>
-        <h4 className={styles.title}>{title}</h4>
+        <h3 className={styles.title}>Короткий ответ</h3>
         <p className={styles.shortAnswer}>{shortAnswer}</p>
       </div>
       {/* ---- */}
       <div className={styles.wrapper}>
-        <h4 className={styles.title}>{title}</h4>
+        <h3 className={styles.title}>Развёрнутый ответ</h3>
         <p className={styles.longAnswer}>{longAnswer}</p>
       </div>
     </div>
