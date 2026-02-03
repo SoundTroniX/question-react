@@ -7,6 +7,7 @@ import {
   selectSpecializationsFilter,
 } from "@features/question/model/questionsFilterSelectors";
 import { selectSkill } from "@features/question/model/questionsFilterSlice";
+import Skeleton from "@shared/ui/Skeleton/Skeleton";
 export default function QuestionSkills() {
   const activeSpecializationId = useAppSelector(selectSpecializationsFilter);
   const {
@@ -23,11 +24,8 @@ export default function QuestionSkills() {
   function handleClick() {
     setShowAll((prev) => !prev);
   }
-  if (isFetching) {
-    return <div>Fetching</div>;
-  }
-  if (isLoading) {
-    return <div>Loading</div>;
+  if (isFetching || isLoading) {
+    return <Skeleton count={1}></Skeleton>;
   }
   return (
     <div className={styles.skills}>

@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useAppDispatch, useAppSelector } from "@app/providers/store";
 import { setSpecialization } from "@features/question/model/questionsFilterSlice";
 import { selectSpecializationsFilter } from "@features/question/model/questionsFilterSelectors";
+import Skeleton from "@shared/ui/Skeleton/Skeleton";
 export default function QuestionSpecialization() {
   const {
     data: specializations,
@@ -19,11 +20,8 @@ export default function QuestionSpecialization() {
   function handleClick() {
     setShowAll((prev) => !prev);
   }
-  if (isFetching) {
-    return <div>Fetching</div>;
-  }
-  if (isLoading) {
-    return <div>Loading</div>;
+  if (isFetching || isLoading) {
+    return <Skeleton count={1}></Skeleton>;
   }
   return (
     <div className={styles.specializations}>
